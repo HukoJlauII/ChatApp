@@ -22,7 +22,6 @@ public class Client {
     public void sendMessage()
     {
         try{
-            System.out.println(Thread.currentThread().getId());
             bufferedWriter.write(username);
             bufferedWriter.newLine();
             bufferedWriter.flush();
@@ -47,7 +46,6 @@ public class Client {
            while (socket.isConnected())
            {
                try {
-                   System.out.println(Thread.currentThread().getId());
                    messageFromGroupChat=bufferedReader.readLine();
                    System.out.println(messageFromGroupChat);
                } catch (IOException e) {
